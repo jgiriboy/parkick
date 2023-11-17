@@ -3,9 +3,8 @@
     import { onMount } from 'svelte';
     import { getApi, putApi, delApi, postApi } from '../service/api';
 
-    let scannedUrl = '';
     let scanning = false;
-
+    let scannedUrl = '';
     let html5Qrcode;
 
     onMount(init);
@@ -34,7 +33,8 @@
 
     function onScanSuccess(decodedText, decodedResult) {
         scannedUrl = decodedText;
-        alert(scannedUrl);
+        alert(`Code matched = ${scannedUrl}`);
+        // console.log(decodedResult);
     }
 
     function onScanFailure(error) {
@@ -46,7 +46,7 @@
             path: scannedUrl,
         };
         const getDatas = await getApi(options);
-        alert(getDatas.parkedStatus);
+        console.log(getDatas);
     };
 </script>
 
