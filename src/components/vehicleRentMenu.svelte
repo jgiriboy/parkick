@@ -1,6 +1,5 @@
 <script>
     import { slide, blur, fly, fade, scale } from 'svelte/transition';
-    import './global.css';
 
     export let pinTitle;
     export let pinId;

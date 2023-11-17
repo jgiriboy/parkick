@@ -1,7 +1,6 @@
 <script>
     import IndexHeader from '../components/indexHeader.svelte';
     import indexMenu from '../components/indexMenu.svelte';
-    import '/global.css';
 </script>
 
 <link
