@@ -2,6 +2,7 @@
     import { Html5Qrcode } from 'html5-qrcode';
     import { onMount } from 'svelte';
     import { getApi, putApi, delApi, postApi } from '../service/api';
+    import axios from 'axios';
 
     let scanning = false;
     let scannedUrl = '';
@@ -31,15 +32,19 @@
         scanning = false;
     }
 
-    async function onScanSuccess(decodedText, decodedResult) {
+    function onScanSuccess(decodedText, decodedResult) {
         scannedUrl = decodedText;
         // alert(`Code matched = ${scannedUrl}`);
         // console.log(decodedResult);
         const options = {
             path: scannedUrl,
         };
-        const getDatas = await getApi(options);
-        alert(getDatas.isLocked);
+        const realUrl =
+            'http://parkick2-env.eba-aype8prr.ap-northeast-2.elasticbeanstalk.com:80' +
+            scannedUrl;
+        axios.get(realUrl).then((response) => {
+            alert(response.data.isLocked);
+        });
     }
 
     function onScanFailure(error) {
