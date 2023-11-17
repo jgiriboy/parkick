@@ -3,6 +3,7 @@
     import { onMount } from 'svelte';
     import { getApi, putApi, delApi, postApi } from '../service/api';
 
+    let scannedUrl = '';
     let scanning = false;
 
     let html5Qrcode;
@@ -31,14 +32,21 @@
         scanning = false;
     }
 
-    async function onScanSuccess(decodedText, decodedResult) {
-        const getDatas = await getApi(decodedText);
-        alert(`Code matched = ${getDatas.parkedStatus}`);
+    function onScanSuccess(decodedText, decodedResult) {
+        scannedUrl = decodedText;
     }
 
     function onScanFailure(error) {
         console.warn(`Code scan error = ${error}`);
     }
+
+    const requestThroughQR = async () => {
+        const options = {
+            path: scannedUrl,
+        };
+        const getDatas = await getApi(options);
+        alert(getDatas.parkedStatus);
+    };
 </script>
 
 <main>
@@ -48,6 +56,7 @@
     {:else}
         <button on:click={start}>start</button>
     {/if}
+    <button on:click={requestThroughQR}>request</button>
 </main>
 
 <style>
