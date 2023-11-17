@@ -33,7 +33,7 @@
 
     function onScanSuccess(decodedText, decodedResult) {
         scannedUrl = decodedText;
-        alert(`Code matched = ${scannedUrl}`);
+        // alert(`Code matched = ${scannedUrl}`);
         // console.log(decodedResult);
     }
 
