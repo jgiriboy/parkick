@@ -17,32 +17,32 @@
         <span class="e21_193 font-medium">3:53</span>
 
         <div class="wifi-icon">
-            <img src="src/assets/wifi.svg" />
+            <img src="images/wifi.svg" alt="" />
         </div>
 
         <div class="signal-icon">
-            <img src="src/assets/signal.svg" />
+            <img src="images/signal.svg" alt="" />
         </div>
 
         <div class="battery-icon">
-            <img src="src/assets/battery.svg" />
+            <img src="images/battery.svg" alt="" />
         </div>
     </div>
 
     <div class="bell-img">
-        <img src="src/assets/bell.svg" />
+        <img src="images/bell.svg" alt="" />
     </div>
 
     <div class="menu-img">
-        <img src="src/assets/menu.svg" />
+        <img src="images/menu.svg" alt="" />
     </div>
 
     <div class="coupon-img">
-        <img src="src/assets/coupon.svg" />
+        <img src="images/coupon.svg" alt="" />
     </div>
 
     <div class="ad-img">
-        <img src="src/assets/ad.png" />
+        <img src="images/mainban.png" alt="" />
     </div>
 
     <div class="e21_241" />
@@ -52,7 +52,7 @@
     <span class="e21_246 font-medium">ParKick</span>
 
     <div class="e21_252">
-        <img src="src/assets/megaphone.svg" />
+        <img src="images/megaphone.svg" alt="" />
     </div>
 
     <span class="e21_253 font-regular"
@@ -72,21 +72,21 @@
     </span><span class="e39_295 font-semibold">대여하기</span>
 
     <div class="e21_277">
-        <img src="src/assets/bicycle.svg" />
+        <img src="images/bicycle.svg" alt="" />
     </div>
 
     <div class="e21_290">
-        <img src="src/assets/star.svg" />
+        <img src="images/star.svg" alt="" />
     </div>
 
     <div class="e39_291">
-        <img src="src/assets/star.svg" />
+        <img src="images/star.svg" alt="" />
     </div>
     <span class="e39_293">가까운<br />파킹 스테이션을<br />찾아요</span><span
         class="e39_303">QR 찍고<br />바로 출발해요</span
     >
     <div class="e39_317">
-        <img src="src/assets/qrcode.svg" />
+        <img src="images/qrcode.svg" alt="" />
     </div>
 
     <div class="e39_321" />

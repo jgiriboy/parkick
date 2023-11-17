@@ -28,9 +28,9 @@
     <span class="e92_85 font-semibold">{pinKickBoardCnt}대 남음</span>
     <span class="e92_86 font-regular">현재 위치로부터 {distanceFromPS}m</span>
     <div class="e92_87">
-        <img src="src/assets/bell2.svg" alt="" />
+        <img src="images/bell2.svg" alt="" />
     </div>
     <div class="e92_91">
-        <img src="src/assets/kickboard.svg" width="20px" height="20px" alt="" />
+        <img src="images/kickboard.svg" width="20px" height="20px" alt="" />
     </div>
 </div>

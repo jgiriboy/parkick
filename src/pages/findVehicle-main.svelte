@@ -59,7 +59,7 @@
             });
             const pinXLen = 46;
             const pinYLen = 46;
-            const imageSrc = 'src/assets/pin.svg';
+            const imageSrc = 'images/pin.svg';
             const imageSize = new kakao.maps.Size(pinXLen, pinYLen);
 
             // 마커의 좌표와 일치시킬 이미지 안에서의 좌표. 꼭짓점 위치.
@@ -154,25 +154,25 @@
         <span class="e39_372 font-medium">3:53</span>
 
         <div class="e39_373">
-            <img src="src/assets/wifi.svg" alt="" />
+            <img src="images/wifi.svg" alt="" />
         </div>
 
         <div class="e39_375">
-            <img src="src/assets/signal.svg" alt="" />
+            <img src="images/signal.svg" alt="" />
         </div>
 
         <div class="e39_379">
-            <img src="src/assets/battery.svg" alt="" />
+            <img src="images/battery.svg" alt="" />
         </div>
     </div>
     <span class="e39_408 font-regular">장소를 검색하세요.</span>
 
     <div class="e39_407">
-        <img src="src/assets/search.svg" alt="" />
+        <img src="images/search.svg" alt="" />
     </div>
 
     <div class="e39_411">
-        <img src="src/assets/menu.svg" alt="" />
+        <img src="images/menu.svg" alt="" />
     </div>
 </div>
 
