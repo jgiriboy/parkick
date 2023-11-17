@@ -1,6 +1,7 @@
 <script>
     import { Html5Qrcode } from 'html5-qrcode';
     import { onMount } from 'svelte';
+    import { getApi, putApi, delApi, postApi } from '../service/api';
 
     let scanning = false;
 
@@ -31,8 +32,8 @@
     }
 
     function onScanSuccess(decodedText, decodedResult) {
-        alert(`Code matched = ${decodedText}`);
-        console.log(decodedResult);
+        const response = getApi(decodedText);
+        alert(`Code matched = ${response}`);
     }
 
     function onScanFailure(error) {
