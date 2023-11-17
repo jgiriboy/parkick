@@ -31,10 +31,15 @@
         scanning = false;
     }
 
-    function onScanSuccess(decodedText, decodedResult) {
+    async function onScanSuccess(decodedText, decodedResult) {
         scannedUrl = decodedText;
         // alert(`Code matched = ${scannedUrl}`);
         // console.log(decodedResult);
+        const options = {
+            path: scannedUrl,
+        };
+        const getDatas = await getApi(options);
+        alert(getDatas.isLocked);
     }
 
     function onScanFailure(error) {
