@@ -31,9 +31,9 @@
         scanning = false;
     }
 
-    function onScanSuccess(decodedText, decodedResult) {
-        const response = getApi(decodedText);
-        alert(`Code matched = ${response}`);
+    async function onScanSuccess(decodedText, decodedResult) {
+        const getDatas = await getApi(decodedText);
+        alert(`Code matched = ${getDatas.parkedStatus}`);
     }
 
     function onScanFailure(error) {
