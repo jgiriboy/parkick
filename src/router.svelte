@@ -9,8 +9,8 @@
 </script>
 
 <Route path="/" redirect="/index" />
-<Route path="index/"><Index /></Route>
+<!-- 수정해야 함 -->
+<Route path="index/"><QRscan /></Route>
 <Route path="findVehicle-main/"><FindVehicleMain /></Route>
-<Route path="rent/"><VehicleRentMenu /></Route>
 <Route path="QRscan/"><QRscan /></Route>
 <Route fallback><NotFound /></Route>
