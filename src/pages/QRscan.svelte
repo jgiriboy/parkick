@@ -34,6 +34,7 @@
 
     function onScanSuccess(decodedText, decodedResult) {
         scannedUrl = decodedText;
+        alert(scannedUrl);
     }
 
     function onScanFailure(error) {
