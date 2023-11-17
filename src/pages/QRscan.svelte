@@ -46,7 +46,7 @@
             path: scannedUrl,
         };
         const getDatas = await getApi(options);
-        console.log(getDatas);
+        alert(getDatas.isLocked);
     };
 </script>
 
