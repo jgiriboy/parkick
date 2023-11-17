@@ -1,6 +1,7 @@
 <script>
     import IndexHeader from '../components/indexHeader.svelte';
     import indexMenu from '../components/indexMenu.svelte';
+    import '/global.css';
 </script>
 
 <link
@@ -8,9 +9,6 @@
     type="text/css"
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
 />
-<link rel="stylesheet" href="src/styles/font.css" />
-<link rel="stylesheet" href="src/styles/index.css" />
-<link rel="stylesheet" href="src/styles/reset.css" />
 
 <div class="e15_8">
     <div class="e39_370">

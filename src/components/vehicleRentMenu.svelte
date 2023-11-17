@@ -1,5 +1,7 @@
 <script>
     import { slide, blur, fly, fade, scale } from 'svelte/transition';
+    import './global.css';
+
     export let pinTitle;
     export let pinId;
     export let pinKickBoardCnt;
@@ -11,9 +13,6 @@
     type="text/css"
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
 />
-<link rel="stylesheet" href="src/styles/font.css" />
-<link rel="stylesheet" href="src/styles/vehicleRentMenu.css" />
-<link rel="stylesheet" href="src/styles/reset.css" />
 
 <div class="e92_53" transition:fade>
     <div class="e92_74" />
