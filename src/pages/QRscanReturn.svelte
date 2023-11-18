@@ -22,7 +22,7 @@
         html5Qrcode.start(
             { facingMode: 'environment' },
             {
-                fps: 1,
+                fps: 10,
                 qrbox: { width: 250, height: 250 },
             },
             onScanSuccess,
@@ -44,15 +44,18 @@
 
         if (res.isRightParkingStation) {
             alert('올바른 주차!');
-            toUrl = '/bestParking';
+            // toUrl = '/bestParking';
+            location.href = '/bestParking';
         } else {
             if (res.isLocked) {
                 alert('잘못 주차된 킥보드에 잠금 처리함');
             } else {
                 alert('잠그지 않고  QR을 찍었음');
             }
-            toUrl = '/worstParking';
+            // toUrl = '/worstParking';
+            location.href = '/worstParking';
         }
+        scanning = false;
     }
 
     function onScanFailure(error) {

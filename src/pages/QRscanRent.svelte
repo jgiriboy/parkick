@@ -20,7 +20,7 @@
         html5Qrcode.start(
             { facingMode: 'environment' },
             {
-                fps: 1,
+                fps: 10,
                 qrbox: { width: 250, height: 250 },
             },
             onScanSuccess,

@@ -21,7 +21,7 @@
     width: 25vh;
     height: 30vh;
 }
-span {
+.thank-you-msg {
     font-family: Pretendard;
     color: #666666;
 }
@@ -37,4 +37,8 @@ span {
 .confirm-text{
     color: white;
     font-size: 20px;
+}
+
+.confirm-text{
+    font-family: Pretendard;
 }

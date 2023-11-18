@@ -1,0 +1,218 @@
+* {
+    font-family: Pretendard;
+}
+.index-main{
+    background-color: rgb(248, 248, 248);
+    width: 100%;
+    height: 100%;
+}
+.index-boxes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+.nav-logo{
+    font-size: 18px;
+}
+
+.index-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 2rem 1.5rem 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu-item {
+    margin-left: 2rem;
+}
+
+.index-ad {
+    width: 100%;
+    background-color: #360CD2;
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ad-text {
+    color: white;
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.ad-text > span:first-child {
+    font-size: 16px;
+    
+}
+.ad-text > span:nth-child(2) {
+    font-size: 24px;
+    
+}
+.ad-text > * {
+    margin-bottom: 1rem;
+}
+
+.ad-text-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+}
+
+.ad-text-box > span {
+    color:#360CD2;
+    font-size: 20px;
+}
+.ad-image {
+    width: 10rem;
+    height: 10rem;
+}
+
+.index-note {
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+.index-note-icon {
+    margin-right: 1rem;
+}
+
+.index-note-text {
+    font-size: 14px;
+    color: #666666;
+}
+
+.index-note-text-border {
+    width:100%;
+    text-align: center;
+}
+
+.index-service {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-service-box {
+    border-radius: 10px;
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.index-service > .index-service-box:first-child {
+    margin-right: 0.5rem;
+}
+.index-service > .index-service-box:nth-child(2) {
+    margin-left: 0.5rem;
+}
+
+.index-service-box > span:first-child {
+    font-size: 18px;
+}
+.index-service-box > span:nth-child(2) {
+    font-size: 12px;
+    color: #999999;
+}
+
+.index-service-box > span {
+    margin: 1rem 0 0 1rem;
+}
+
+.index-service-box > img {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+.index-get-reward {
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    margin: 1rem 1rem 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.get-reward-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.get-reward-text > span:first-child {
+    font-size: 18px;
+    margin-bottom: 0.3rem;
+}
+
+.get-reward-text > span:nth-child(2) {
+    font-size: 12px;
+    color: #666666;
+    margin-top: 0.3rem;
+}
+
+.index-get-reward > a {
+    text-decoration: none;
+    color: #333333;
+    background-color: #FFD839;
+    border-radius: 10px;
+    padding: 0.8rem;
+}
+
+.index-user-reward {
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    margin: 1rem 1rem 0 1rem;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.user-reward-left {
+    display :flex;
+    flex-direction: column;
+}
+
+.user-reward-left > span:first-child {
+    font-size: 18px;
+}
+
+.user-reward-left > span:nth-child(2) {
+    font-size: 12px;
+    color: #666666;
+}
+
+.user-reward-right > span {
+    font-size: 24px;
+}
+
+.user-reward-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.user-reward-button {
+    text-align: center;
+    background-color: #FFD839;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 2rem;
+}

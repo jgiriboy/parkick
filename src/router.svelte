@@ -9,6 +9,7 @@
     import QRscanReturn from './pages/QRscanRent.svelte';
     import BestParking from './pages/bestParking.svelte';
     import WorstParking from './pages/worstParking.svelte';
+    import IndexRe from './pages/indexRe.svelte';
 </script>
 
 <Route path="/" redirect="/index" />
@@ -18,4 +19,5 @@
 <Route path="/QRscanReturn/"><QRscanReturn /></Route>
 <Route path="/bestParking/"><BestParking /></Route>
 <Route path="/worstParking/"><WorstParking /></Route>
+<Route path="/indexRe"><IndexRe /></Route>
 <Route fallback><NotFound /></Route>
