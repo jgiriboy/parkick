@@ -2,15 +2,13 @@
     import { Html5Qrcode } from 'html5-qrcode';
     import { onMount } from 'svelte';
     import { getApi, putApi, delApi, postApi } from '../service/api';
-    import WorstParking from './worstParking.svelte';
-    import BestParking from './bestParking.svelte';
+    import { slide, blur, fly, fade, scale } from 'svelte/transition';
 
     let scanning = false;
     let goodParking = false;
     let worstParking = false;
 
     let html5Qrcode;
-    let toUrl = '';
 
     onMount(() => {
         init();
@@ -44,7 +42,7 @@
             path: '/app/parking/' + decodedText,
         };
         const res = await getApi(options);
-
+        // alert(res.isRightParkingStation);
         if (res.isRightParkingStation) {
             // alert('올바른 주차!');
             goodParking = true;
@@ -63,6 +61,37 @@
         console.warn(`Code scan error = ${error}`);
     }
 </script>
+
+{#if goodParking}
+    <div class="BP-main" transition:fly>
+        <div class="note-box">
+            <img src="images/good.png" alt="" class="good-img" />
+            <span class="thank-you-msg font-regular"
+                >모범적인 주차 감사합니다.</span
+            >
+        </div>
+        <a href="/">
+            <div class="BP-button">
+                <span class="confirm-text font-semibold">확인</span>
+            </div>
+        </a>
+    </div>
+{/if}
+
+{#if worstParking}
+    <div class="BP-main" transition:fly>
+        <div class="note-box">
+            <img src="images/bad.png" alt="" class="good-img" />
+            <span class="thank-you-msg font-regular"
+                >정상적인 주차가 아닙니다.</span
+            >
+        </div>
+        <a href="/">
+            <div class="BP-button">
+                <span class="confirm-text font-semibold">확인</span>
+            </div>
+        </a>
+    </div>{/if}
 
 <div class="qrcode-main">
     <nav class="qrcode-nav">
@@ -85,10 +114,3 @@
         <span>코드스캔</span>
     </div>
 </div>
-
-{#if goodParking}
-    <BestParking />
-{/if}
-{#if worstParking}
-    <WorstParking />
-{/if}
