@@ -1,8 +1,8 @@
 * {
     z-index: 2;
 }
+
 .BP-main {
-    /* background-color: whi; */
     width:100vw;
     height:100vh;
     display: flex;
@@ -12,8 +12,8 @@
 }
 .note-box {
     background-color: white;
-    width: 80vw;
-    height: 70vh;
+    width: 70%;
+    height: 50%;
     display: flex;
     justify-content: space-evenly;
     border-radius: 4rem 4rem 0 0;
@@ -28,10 +28,15 @@
     font-family: Pretendard;
     color: #666666;
 }
+
+.BP-main > a {
+    width: 70%;
+}
+
 .BP-button {
     background-color: #393333;
-    width: 80vw;
-    height:10vh;
+    width: 100%;
+    padding: 1rem 0;
     border-radius: 0 0 4rem 4rem;
     display: flex;
     justify-content: center;

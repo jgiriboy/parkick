@@ -5,8 +5,8 @@
     import NotFound from './pages/notFound.svelte';
     import FindVehicleMain from './pages/findVehicle-main.svelte';
     import VehicleRentMenu from './components/vehicleRentMenu.svelte';
-    import QRscanRent from './pages/QRscanReturn.svelte';
-    import QRscanReturn from './pages/QRscanRent.svelte';
+    import QRscanRent from './pages/QRscanRent.svelte';
+    import QRscanReturn from './pages/QRscanReturn.svelte';
     import BestParking from './pages/bestParking.svelte';
     import WorstParking from './pages/worstParking.svelte';
     import ParkickMap from './pages/parkickMap.svelte';

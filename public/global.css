@@ -3,6 +3,7 @@
 @import url('BP.css');
 @import url('indexRe.css');
 @import url('parkickMap.css');
+@import url('QRcode.css');
 
 /* vehicleRentMenu */
 .e92_53 { 
@@ -238,11 +239,7 @@
 	font-size:18px;
 	letter-spacing:0;
 }
-#reader {
-    left:-155px;
-    width:700px;
-    margin-top:95px;
-}
+
 
 .e107_6 { 
 	background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
@@ -300,11 +297,5 @@
 	top:4.7500386238098145px;
 }
 
-.cancel-button {
-    display: flex;
-    position: absolute;
-    top:60px;
-    left: 10px;
-}
 
 

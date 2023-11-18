@@ -1,0 +1,55 @@
+.qrcode-main {
+    width: 100vw;
+    height: 100vh;
+    font-family: Pretendard;
+}
+
+.qrcode-nav {
+    padding: 4rem 1rem 0.5rem 1rem;
+    position: relative;
+    display: flex;
+}
+
+#reader {
+    width:100%;
+}
+
+.cancel-button {
+    flex: 1;
+}
+
+.qrcode-nav > span {
+    flex: 1;
+}
+
+.qrcode-nav > div {
+    flex: 1;
+    text-align: center;
+}
+
+.code-scan-text {
+    font-size: 18px;
+}
+
+.notice-text {
+    color: #666666;
+    font-size: 14px;
+}
+
+.notice-text-div {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scan-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.scan-button > img {
+    width: 10%;
+}
