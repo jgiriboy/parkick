@@ -3,18 +3,33 @@
     import { onMount } from 'svelte';
     import IndexHeader from '../components/indexHeader.svelte';
     import indexMenu from '../components/indexMenu.svelte';
+    import { getApi } from '../service/api';
 
     onMount(() => {
         rewards.resetRewards();
         rewards.fetchRewards();
     });
+
+    const initRequest = async () => {
+        const options = {
+            path: '/admin/set-up',
+        };
+        await getApi(options);
+        alert('주행 상태로 변경');
+    };
 </script>
 
 <main class="index-main">
     <nav class="index-nav">
         <span class="nav-logo font-semibold">ParKick</span>
         <div class="nav-menu">
-            <img src="images/coupon.svg" class="nav-menu-item" alt="" />
+            <img
+                src="images/coupon.svg"
+                class="nav-menu-item"
+                alt=""
+                on:click={initRequest}
+            />
+
             <img src="images/bell.svg" class="nav-menu-item" alt="" />
             <img src="images/menu.svg" class="nav-menu-item" alt="" />
         </div>
