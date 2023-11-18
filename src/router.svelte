@@ -9,13 +9,15 @@
     import QRscanReturn from './pages/QRscanRent.svelte';
     import BestParking from './pages/bestParking.svelte';
     import WorstParking from './pages/worstParking.svelte';
+    import ParkickMap from './pages/parkickMap.svelte';
 </script>
 
 <Route path="/" redirect="/index" />
 <Route path="/index/"><Index /></Route>
 <Route path="/findVehicle-main/"><FindVehicleMain /></Route>
-<Route path="/QRscanRent/"><QRscanRent /></Route>
+<Route path="/rent/"><QRscanRent /></Route>
 <Route path="/QRscanReturn/"><QRscanReturn /></Route>
 <Route path="/bestParking/"><BestParking /></Route>
 <Route path="/worstParking/"><WorstParking /></Route>
+<Route path="/parkickMap"><ParkickMap /></Route>
 <Route fallback><NotFound /></Route>

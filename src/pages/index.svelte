@@ -41,16 +41,19 @@
     </div>
     <div class="index-boxes">
         <div class="index-service">
-            <div class="index-parkingStation index-service-box">
+            <a
+                href="/findVehicle-main"
+                class="index-parkingStation index-service-box"
+            >
                 <span class="font-semibold">파킹 스테이션</span>
                 <span>가까운<br />파킹 스테이션을<br />찾아요</span>
                 <img src="images/bicycle.svg" class="service-img-PS" alt="" />
-            </div>
-            <div class="index-QRcode index-service-box">
+            </a>
+            <a href="/rent" class="index-QRcode index-service-box">
                 <span class="font-semibold">대여하기</span>
                 <span>QR 찍고<br />바로 출발해요</span>
                 <img src="images/qrcode.svg" class="service-img-QR" alt="" />
-            </div>
+            </a>
         </div>
         <div class="index-get-reward">
             <div class="get-reward-text">
