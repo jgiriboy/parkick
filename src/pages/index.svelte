@@ -2,6 +2,7 @@
     import { rewards } from '../stores';
     import { onMount } from 'svelte';
     import { getApi } from '../service/api';
+    import { currentRentStatus } from '../stores';
 
     onMount(() => {
         rewards.resetRewards();
@@ -13,6 +14,7 @@
             path: '/admin/set-up',
         };
         await getApi(options);
+        currentRentStatus.resetValues();
         alert('주행 상태로 변경');
     };
 </script>

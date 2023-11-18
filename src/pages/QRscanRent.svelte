@@ -3,6 +3,7 @@
     import { onMount } from 'svelte';
     import { getApi, putApi, delApi, postApi } from '../service/api';
     import { slide, blur, fly, fade, scale } from 'svelte/transition';
+    import { currentRentStatus } from '../stores';
 
     let isScanned = false;
     let isParkedWell = false;
@@ -14,6 +15,16 @@
         start();
     });
 
+    let qrboxFunction = function (viewfinderWidth, viewfinderHeight) {
+        let minEdgePercentage = 0.8; // 70%
+        let minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
+        let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
+        return {
+            width: qrboxSize,
+            height: qrboxSize,
+        };
+    };
+
     function init() {
         html5Qrcode = new Html5Qrcode('reader');
     }
@@ -23,7 +34,7 @@
             { facingMode: 'environment' },
             {
                 fps: 10,
-                qrbox: { width: 250, height: 250 },
+                qrbox: qrboxFunction,
             },
             onScanSuccess,
             onScanFailure
@@ -39,8 +50,10 @@
         isScanned = true;
         if (res.parkedStatus == 'PARKED') {
             isParkedWell = true;
+            currentRentStatus.setValues('PARKED');
         } else {
             isParkedWell = false;
+            currentRentStatus.setValues('UN_PARKED');
         }
     }
 
@@ -68,7 +81,7 @@
         <div class="note-box">
             <img src="images/good.png" alt="" class="good-img" />
             <span class="thank-you-msg font-regular"
-                >대여를 할 수 없는 상태입니다.</span
+                >비정상 주차 킥보드. 반납 시 리워드 지급!</span
             >
         </div>
         <a href="/">

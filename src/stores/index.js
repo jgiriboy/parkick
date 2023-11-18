@@ -130,9 +130,33 @@ function setRewards() {
         resetRewards,
     };
 }
+// 현재 빌린 킥보드의 상태를 저장
+function setcurrentRentStatus() {
+    let initValues = {
+        parkedStatus: 'PARKED',
+    };
+
+    const { subscribe, update, set } = writable({ ...initValues });
+
+    const setValues = (curStatus) => {
+        update((datas) => {
+            datas.parkedStatus = curStatus;
+            return datas;
+        });
+    };
+
+    const resetValues = () => {
+        set({ ...initValues });
+    };
+
+    return {
+        subscribe,
+        setValues,
+        resetValues,
+    };
+}
 
 function setLoadingMap() {} // PS 정보를 불러오면서 서버와 통신 중인 상태 저장
-function setKickBoards() {} // PS 하나에 존재하는 킥보드 리스트
 function setKickBoardInfo() {} // 킥보드 하나의 정보를 저장
 function setAuth() {} // 로그인한 유저 정보
 function setIsLogin() {} // 로그인한 상태인지 아닌지
@@ -141,7 +165,7 @@ export const PSIDs = setPSIDs();
 export const PSInfos = setPSInfos();
 export const rewards = setRewards();
 export const loadingMap = setLoadingMap();
-export const kickBoards = setKickBoards();
+export const currentRentStatus = setcurrentRentStatus();
 export const kickBoardInfo = setKickBoardInfo();
 export const auth = setAuth();
 export const isLogin = setIsLogin();

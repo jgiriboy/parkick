@@ -3,6 +3,8 @@
     import { onMount } from 'svelte';
     import { getApi, putApi, delApi, postApi } from '../service/api';
     import { slide, blur, fly, fade, scale } from 'svelte/transition';
+    import { currentRentStatus } from '../stores';
+    import { rewards } from '../stores';
 
     let scanning = false;
     let goodParking = false;
@@ -16,7 +18,7 @@
     });
 
     let qrboxFunction = function (viewfinderWidth, viewfinderHeight) {
-        let minEdgePercentage = 0.8; // 70%
+        let minEdgePercentage = 0.8; // 80%
         let minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
         let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
         return {
@@ -54,15 +56,36 @@
         const res = await getApi(options);
         if (res.isRightParkingStation) {
             goodParking = true;
+            worstParking = false;
         } else {
             if (res.isLocked) {
                 // alert('잘못 주차된 킥보드에 잠금 처리함');
             } else {
-                // alert('잠그지 않고  QR을 찍었음');
+                // 그냥 QR 찍기
             }
             worstParking = true;
+            goodParking = false;
         }
         scanning = false;
+
+        if (goodParking) {
+            // 리워드 지급하도록 요청 보내기
+            const resultRewards = $rewards.currentPoint + 500;
+            const options = {
+                path: '/app/point?updatedPoint=' + resultRewards.toString(),
+            };
+            const res = await postApi(options);
+            console.log(res.currentPoint);
+        }
+        // 패널티
+        if (worstParking) {
+            const resultRewards = $rewards.currentPoint - 500;
+            const options = {
+                path: '/app/point?updatedPoint=' + resultRewards.toString(),
+            };
+            const res = await postApi(options);
+            console.log(res.currentPoint);
+        }
     }
 
     function onScanFailure(error) {
@@ -70,12 +93,26 @@
     }
 </script>
 
-{#if goodParking}
+{#if goodParking && $currentRentStatus.parkedStatus == 'PARKED'}
     <div class="BP-main" transition:fly>
         <div class="note-box">
             <img src="images/good.png" alt="" class="good-img" />
             <span class="thank-you-msg font-regular"
                 >모범적인 주차 감사합니다.</span
+            >
+        </div>
+        <a href="/">
+            <div class="BP-button">
+                <span class="confirm-text font-semibold">확인</span>
+            </div>
+        </a>
+    </div>
+{:else if goodParking && $currentRentStatus.parkedStatus == 'UN_PARKED'}
+    <div class="BP-main" transition:fly>
+        <div class="note-box">
+            <img src="images/good.png" alt="" class="good-img" />
+            <span class="thank-you-msg font-regular"
+                >반납 감사합니다.<br />리워드 500원이 지급됩니다.</span
             >
         </div>
         <a href="/">
@@ -91,7 +128,7 @@
         <div class="note-box">
             <img src="images/bad.png" alt="" class="good-img" />
             <span class="thank-you-msg font-regular"
-                >정상적인 주차가 아닙니다.</span
+                >정상적인 주차가 아닙니다.<br /> 5% 추가 요금이 부과됩니다.</span
             >
         </div>
         <a href="/">
