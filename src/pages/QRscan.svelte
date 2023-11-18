@@ -5,7 +5,6 @@
     import axios from 'axios';
 
     let scanning = false;
-    let scannedUrl = '';
     let html5Qrcode;
 
     onMount(init);
@@ -32,30 +31,18 @@
         scanning = false;
     }
 
-    function onScanSuccess(decodedText, decodedResult) {
-        scannedUrl = decodedText;
+    async function onScanSuccess(decodedText, decodedResult) {
         // alert(`Code matched = ${scannedUrl}`);
-        // console.log(decodedResult);
         const options = {
-            path: scannedUrl,
+            path: decodedText,
         };
-        const realUrl = '52.79.45.94:80' + scannedUrl;
-        axios.get(realUrl).then((response) => {
-            alert(response.data.isLocked);
-        });
+        const res = await getApi(options);
+        alert(res.isLocked);
     }
 
     function onScanFailure(error) {
         console.warn(`Code scan error = ${error}`);
     }
-
-    const requestThroughQR = async () => {
-        const options = {
-            path: scannedUrl,
-        };
-        const getDatas = await getApi(options);
-        alert(getDatas.isLocked);
-    };
 </script>
 
 <main>
@@ -65,7 +52,6 @@
     {:else}
         <button on:click={start}>start</button>
     {/if}
-    <button on:click={requestThroughQR}>request</button>
 </main>
 
 <style>
