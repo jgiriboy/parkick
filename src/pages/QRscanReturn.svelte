@@ -101,7 +101,8 @@
                 <span class="confirm-text font-semibold">확인</span>
             </div>
         </a>
-    </div>{/if}
+    </div>
+{/if}
 
 <div class="qrcode-main">
     <nav class="qrcode-nav">

@@ -7,27 +7,30 @@
     export let distanceFromPS;
 </script>
 
-<div class="e92_53" transition:fade>
-    <div class="e92_74" />
-    <!--  -->
-    <a href="/QRscanRent">
-        <div class="e92_75" />
-        <span class="e92_76 font-semibold">대여하기</span>
+<div class="rentModal-main">
+    <div class="rent-modal-nav">
+        <div class="rent-modal-remain">
+            <img src="images/kickboard.svg" alt="" />
+            <span class="font-semibold">{pinKickBoardCnt}대 남음</span>
+        </div>
+        <span class="rent-modal-distance">
+            현재 위치로부터 {distanceFromPS}m
+        </span>
+    </div>
+    <div class="rent-modal-info">
+        <div class="modal-info-text">
+            <span class="font-semibold">{pinTitle}</span>
+            <span class="font-semibold">INHA_PS_{pinId}</span>
+        </div>
+        <img src="images/bell2.svg" class="modal-info-img" alt="" />
+    </div>
+    <div class="rent-mdoal-fee">
+        <span class="font-semibold">평일</span>
+        <span>잠금해제 1,000원 + 주행요금 150원/1분</span>
+    </div>
+    <a href="/QRscanReturn" class="rent-modal-button">
+        <div class="rent-modal-button-border">
+            <span class="font-semibold">대여하기</span>
+        </div>
     </a>
-
-    <!--  -->
-    <div class="e92_77" />
-    <span class="e92_78 font-semibold">평일</span><span
-        class="e92_79 font-regular">잠금해제 1,000원 + 주행요금 150원/1분</span
-    ><span class="e92_80 font-semibold">{pinTitle}</span><span
-        class="e92_81 font-semibold">ID: INHA_PS_{pinId}</span
-    >
-    <span class="e92_85 font-semibold">{pinKickBoardCnt}대 남음</span>
-    <span class="e92_86 font-regular">현재 위치로부터 {distanceFromPS}m</span>
-    <div class="e92_87">
-        <img src="images/bell2.svg" alt="" />
-    </div>
-    <div class="e92_91">
-        <img src="images/kickboard.svg" width="20px" height="20px" alt="" />
-    </div>
 </div>

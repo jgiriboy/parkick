@@ -137,5 +137,16 @@
     });
 </script>
 
-<div id="map" />
-<!-- <main class="map-main" /> -->
+<main class="map-main">
+    <div id="map" />
+    <div class="search-bar" />
+
+    {#if showRentMenu}
+        <VehicleRentMenu
+            {pinTitle}
+            {pinId}
+            {pinKickBoardCnt}
+            {distanceFromPS}
+        />
+    {/if}
+</main>

@@ -42,7 +42,7 @@
     <div class="index-boxes">
         <div class="index-service">
             <a
-                href="/findVehicle-main"
+                href="/parkickMap"
                 class="index-parkingStation index-service-box"
             >
                 <span class="font-semibold">파킹 스테이션</span>
