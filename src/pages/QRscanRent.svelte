@@ -28,16 +28,10 @@
         );
         scanning = true;
     }
-
-    async function stop() {
-        await html5Qrcode.stop();
-        scanning = false;
-    }
-
     async function onScanSuccess(decodedText, decodedResult) {
         // alert(`Code matched = ${scannedUrl}`);
         const options = {
-            path: '/app/parking/' + decodedText,
+            path: '/app/pulling?kickBoardId=' + decodedText,
         };
         const res = await getApi(options);
 

@@ -28,14 +28,29 @@
         );
         scanning = true;
     }
+
+    async function stop() {
+        await html5Qrcode.stop();
+        scanning = false;
+    }
+
     async function onScanSuccess(decodedText, decodedResult) {
-        // alert(`Code matched = ${scannedUrl}`);
         const options = {
-            path: '/app/pulling?kickBoardId=' + decodedText,
+            path: '/app/parking/' + decodedText,
         };
         const res = await getApi(options);
 
-        alert('RENT: ' + res.isLocked);
+        if (res.isRightParkingStation) {
+            alert('올바른 주차!');
+            location.href = '/bestParking';
+        } else {
+            if (res.isLocked) {
+                alert('잘못 주차된 킥보드에 잠금 처리함');
+            } else {
+                alert('잠그지 않고  QR을 찍었음');
+            }
+            location.href = '/worstParking';
+        }
     }
 
     function onScanFailure(error) {
