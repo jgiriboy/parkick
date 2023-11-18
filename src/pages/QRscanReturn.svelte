@@ -4,8 +4,13 @@
     import { getApi, putApi, delApi, postApi } from '../service/api';
     import { Link } from 'svelte-routing';
     import axios from 'axios';
+    import WorstParking from './worstParking.svelte';
+    import BestParking from './bestParking.svelte';
 
     let scanning = false;
+    let goodParking = false;
+    let worstParking = false;
+
     let html5Qrcode;
     let toUrl = '';
 
@@ -43,17 +48,15 @@
         const res = await getApi(options);
 
         if (res.isRightParkingStation) {
-            alert('올바른 주차!');
-            // toUrl = '/bestParking';
-            location.href = '/bestParking';
+            // alert('올바른 주차!');
+            goodParking = true;
         } else {
             if (res.isLocked) {
-                alert('잘못 주차된 킥보드에 잠금 처리함');
+                // alert('잘못 주차된 킥보드에 잠금 처리함');
             } else {
-                alert('잠그지 않고  QR을 찍었음');
+                // alert('잠그지 않고  QR을 찍었음');
             }
-            // toUrl = '/worstParking';
-            location.href = '/worstParking';
+            worstParking = true;
         }
         scanning = false;
     }
@@ -79,6 +82,12 @@
         </div>
     </div>
 </div>
+{#if goodParking}
+    <BestParking />
+{/if}
+{#if worstParking}
+    <WorstParking />
+{/if}
 
 <style>
     main {

@@ -1,5 +1,8 @@
+* {
+    z-index: 2;
+}
 .BP-main {
-    background-color: #FFD839;
+    /* background-color: whi; */
     width:100vw;
     height:100vh;
     display: flex;
