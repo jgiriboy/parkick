@@ -15,7 +15,7 @@
 <Route path="/" redirect="/index" />
 <Route path="/index/"><Index /></Route>
 <Route path="/findVehicle-main/"><FindVehicleMain /></Route>
-<Route path="/rent/"><QRscanRent /></Route>
+<Route path="/rent/"><QRscanReturn /></Route>
 <Route path="/QRscanReturn/"><QRscanReturn /></Route>
 <Route path="/bestParking/"><BestParking /></Route>
 <Route path="/worstParking/"><WorstParking /></Route>
