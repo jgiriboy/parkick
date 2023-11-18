@@ -39,9 +39,7 @@
         const options = {
             path: scannedUrl,
         };
-        const realUrl =
-            'http://parkick2-env.eba-aype8prr.ap-northeast-2.elasticbeanstalk.com:80' +
-            scannedUrl;
+        const realUrl = '52.79.45.94:80' + scannedUrl;
         axios.get(realUrl).then((response) => {
             alert(response.data.isLocked);
         });

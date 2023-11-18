@@ -55,36 +55,26 @@
     <span class="e21_253 font-regular"
         >ParKick 출시 기념 PK코인 적립 이벤트 !</span
     >
-    <!-- TODO -->
-    <!-- TODO -->
-    <!-- TODO: 268 클릭 시 findVehcile-main으로 가도록 Redirect -->
-    <div class="e21_268" />
+    <a href="/findVehicle-main" class="e21_268">
+        <span class="e21_270 font-semibold">파킹 스테이션 </span>
+        <span class="e39_293">가까운<br />파킹 스테이션을<br />찾아요</span>
+        <div>
+            <div class="e21_277">
+                <img src="images/bicycle.svg" alt="" />
+            </div>
+        </div></a
+    >
     <!-- TODO -->
     <!-- TODO -->
     <!-- TODO: 294 클릭 시 rent 로 가는 링크를 생성해야 함 -->
-    <div class="e39_294" />
-    <span class="e21_269 font-semibold">ParKick</span><span
-        class="e21_270 font-semibold"
-        >파킹 스테이션
-    </span><span class="e39_295 font-semibold">대여하기</span>
-
-    <div class="e21_277">
-        <img src="images/bicycle.svg" alt="" />
-    </div>
-
-    <div class="e21_290">
-        <img src="images/star.svg" alt="" />
-    </div>
-
-    <div class="e39_291">
-        <img src="images/star.svg" alt="" />
-    </div>
-    <span class="e39_293">가까운<br />파킹 스테이션을<br />찾아요</span><span
-        class="e39_303">QR 찍고<br />바로 출발해요</span
+    <a href="/QRscan" class="e39_294">
+        <span class="e39_295 font-semibold">대여하기</span>
+        <span class="e39_303">QR 찍고<br />바로 출발해요</span>
+        <div class="e39_317">
+            <img src="images/qrcode.svg" alt="" />
+        </div></a
     >
-    <div class="e39_317">
-        <img src="images/qrcode.svg" alt="" />
-    </div>
+    <span class="e21_269 font-semibold">ParKick</span>
 
     <div class="e39_321" />
     <div class="e39_329" />

@@ -1,5 +1,5 @@
 <script>
-    import { Route } from 'tinro';
+    import { Route, router, active } from 'tinro';
 
     import Index from './pages/index.svelte';
     import NotFound from './pages/notFound.svelte';
@@ -10,7 +10,7 @@
 
 <Route path="/" redirect="/index" />
 <!-- 수정해야 함 -->
-<Route path="index/"><QRscan /></Route>
-<Route path="findVehicle-main/"><FindVehicleMain /></Route>
-<Route path="QRscan/"><QRscan /></Route>
+<Route path="/index/"><Index /></Route>
+<Route path="/findVehicle-main/"><FindVehicleMain /></Route>
+<Route path="/QRscan/"><QRscan /></Route>
 <Route fallback><NotFound /></Route>
