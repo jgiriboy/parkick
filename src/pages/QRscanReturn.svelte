@@ -52,9 +52,7 @@
             path: '/app/parking/' + decodedText,
         };
         const res = await getApi(options);
-        // alert(res.isRightParkingStation);
         if (res.isRightParkingStation) {
-            // alert('올바른 주차!');
             goodParking = true;
         } else {
             if (res.isLocked) {

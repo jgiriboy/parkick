@@ -28,7 +28,7 @@
         <span class="font-semibold">평일</span>
         <span>잠금해제 1,000원 + 주행요금 150원/1분</span>
     </div>
-    <a href="/QRscanReturn" class="rent-modal-button">
+    <a href="/rent" class="rent-modal-button">
         <div class="rent-modal-button-border">
             <span class="font-semibold">대여하기</span>
         </div>
