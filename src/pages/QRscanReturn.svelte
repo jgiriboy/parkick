@@ -2,10 +2,12 @@
     import { Html5Qrcode } from 'html5-qrcode';
     import { onMount } from 'svelte';
     import { getApi, putApi, delApi, postApi } from '../service/api';
+    import { Link } from 'svelte-routing';
     import axios from 'axios';
 
     let scanning = false;
     let html5Qrcode;
+    let toUrl = '';
 
     onMount(() => {
         init();
@@ -42,14 +44,14 @@
 
         if (res.isRightParkingStation) {
             alert('올바른 주차!');
-            location.href = '/bestParking';
+            toUrl = '/bestParking';
         } else {
             if (res.isLocked) {
                 alert('잘못 주차된 킥보드에 잠금 처리함');
             } else {
                 alert('잠그지 않고  QR을 찍었음');
             }
-            location.href = '/worstParking';
+            toUrl = '/worstParking';
         }
     }
 

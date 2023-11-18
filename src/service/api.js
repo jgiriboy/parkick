@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 const send = async ({ method = '', path = '', data = {} } = {}) => {
-    const commonURl = 'http://52.79.45.94:80'; // 백엔드 서버 주소
+    const commonURl = 'https://parkick.shop'; // 백엔드 서버 주소
     const url = commonURl + path; // API로 전달될 주소
 
     const headers = {
-        'Access-Control-Allow-Origin': 'http://52.79.45.94:80', // 백엔드 서버의 주소. 크로스 도메인 대응
+        'Access-Control-Allow-Origin': 'https://parkick.shop', // 백엔드 서버의 주소. 크로스 도메인 대응
         'Access-Control-Allow-Credentials': true,
         'content-type': 'application/json;charset=UTF-8', // 송수신 데이터 타입
         accept: 'application/json',
