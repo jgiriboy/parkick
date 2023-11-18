@@ -60,7 +60,7 @@
                 <span class="font-semibold">주차하고 리워드 받기 !</span>
                 <span>흩어져 있는 킥보드를 다시 주차해요</span>
             </div>
-            <a href="/">
+            <a href="/QRscanReturn">
                 <span>리워드 받기</span>
             </a>
         </div>
