@@ -32,7 +32,7 @@
     margin-left: 2rem;
 }
 
-.index-ad {
+.index-my {
     width: 100%;
     background-color: #360CD2;
     padding: 3rem 0;
@@ -41,7 +41,7 @@
     justify-content: center;
 }
 
-.ad-text {
+.my-text {
     color: white;
     display: flex;
     align-items:flex-start;
@@ -49,29 +49,29 @@
     justify-content:space-between;
 }
 
-.ad-text > span:first-child {
+.my-text > span:first-child {
     font-size: 16px;
     
 }
-.ad-text > span:nth-child(2) {
+.my-text > span:nth-child(2) {
     font-size: 24px;
     
 }
-.ad-text > * {
+.my-text > * {
     margin-bottom: 1rem;
 }
 
-.ad-text-box {
+.my-text-box {
     background-color: white;
     border-radius: 10px;
     padding: 0.5rem 1rem;
 }
 
-.ad-text-box > span {
+.my-text-box > span {
     color:#360CD2;
     font-size: 20px;
 }
-.ad-image {
+.my-image {
     width: 10rem;
     height: 10rem;
 }

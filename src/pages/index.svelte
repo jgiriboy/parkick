@@ -19,17 +19,17 @@
             <img src="images/menu.svg" class="nav-menu-item" alt="" />
         </div>
     </nav>
-    <div class="index-ad">
-        <div class="ad-text">
+    <div class="index-my">
+        <div class="my-text">
             <span class="font-regular">ParKick</span>
             <span class="font-bold"
                 >바르게 주차만 해도<br />PK 코인이<br />쌓인다!</span
             >
-            <div class="ad-text-box font-bold">
+            <div class="my-text-box font-bold">
                 <span>Ride To Earn</span>
             </div>
         </div>
-        <img src="images/kickboard-woman.png" class="ad-image" alt="" />
+        <img src="images/kickboard-woman.png" class="my-image" alt="" />
     </div>
     <div class="index-note">
         <img src="images/megaphone.svg" class="index-note-icon" alt="" />
