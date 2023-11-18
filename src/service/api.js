@@ -18,7 +18,7 @@ const send = async ({ method = '', path = '', data = {} } = {}) => {
         url,
         headers,
         data,
-        // withCredentials: true, // 꼭 작성해야 함. 백, 프론트 포트가 다르면 무조건 트루
+        withCredentials: true, // 꼭 작성해야 함. 백, 프론트 포트가 다르면 무조건 트루
     };
 
     try {
