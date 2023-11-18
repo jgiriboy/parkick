@@ -35,9 +35,9 @@
             path: '/app/pulling?kickBoardId=' + decodedText,
         };
         const res = await getApi(options);
-        // console.log(res.parkedStatus);
+
         isScanned = true;
-        if (res.parkedStatus === 'PARKED') {
+        if (res.parkedStatus == 'PARKED') {
             isParkedWell = true;
         } else {
             isParkedWell = false;

@@ -1,8 +1,6 @@
 <script>
     import { rewards } from '../stores';
     import { onMount } from 'svelte';
-    import IndexHeader from '../components/indexHeader.svelte';
-    import indexMenu from '../components/indexMenu.svelte';
     import { getApi } from '../service/api';
 
     onMount(() => {
@@ -73,10 +71,10 @@
         <div class="index-get-reward">
             <div class="get-reward-text">
                 <span class="font-semibold">주차하고 리워드 받기 !</span>
-                <span>흩어져 있는 킥보드를 다시 주차해요</span>
+                <span>파킹 스테이션에 올바르게 주차해요</span>
             </div>
             <a href="/QRscanReturn">
-                <span>리워드 받기</span>
+                <span>반납하기</span>
             </a>
         </div>
         <div class="index-user-reward">
