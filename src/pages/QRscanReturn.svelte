@@ -15,6 +15,16 @@
         start();
     });
 
+    let qrboxFunction = function (viewfinderWidth, viewfinderHeight) {
+        let minEdgePercentage = 0.8; // 70%
+        let minEdgeSize = Math.min(viewfinderWidth, viewfinderHeight);
+        let qrboxSize = Math.floor(minEdgeSize * minEdgePercentage);
+        return {
+            width: qrboxSize,
+            height: qrboxSize,
+        };
+    };
+
     function init() {
         html5Qrcode = new Html5Qrcode('reader');
     }
@@ -24,7 +34,7 @@
             { facingMode: 'environment' },
             {
                 fps: 10,
-                qrbox: { width: 250, height: 250 },
+                qrbox: qrboxFunction,
             },
             onScanSuccess,
             onScanFailure
