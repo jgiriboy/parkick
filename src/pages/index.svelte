@@ -1,13 +1,14 @@
 <script>
+    import { rewards } from '../stores';
+    import { onMount } from 'svelte';
     import IndexHeader from '../components/indexHeader.svelte';
     import indexMenu from '../components/indexMenu.svelte';
-</script>
 
-<link
-    rel="stylesheet"
-    type="text/css"
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-/>
+    onMount(() => {
+        rewards.resetRewards();
+        rewards.fetchRewards();
+    });
+</script>
 
 <div class="e15_8">
     <div class="e39_370">
@@ -67,7 +68,7 @@
     <!-- TODO -->
     <!-- TODO -->
     <!-- TODO: 294 클릭 시 rent 로 가는 링크를 생성해야 함 -->
-    <a href="/QRscan" class="e39_294">
+    <a href="/QRscanRent" class="e39_294">
         <span class="e39_295 font-semibold">대여하기</span>
         <span class="e39_303">QR 찍고<br />바로 출발해요</span>
         <div class="e39_317">
@@ -87,5 +88,5 @@
     <span class="e39_336">코인 사용하러 가기</span>
     <span class="e39_325">흩어져 있는 킥보드를 다시 주차해요</span>
     <span class="e39_331">OOO 라이더 님</span>
-    <span class="e39_332">12,345 원</span>
+    <span class="e39_332">{$rewards.currentPoint} 원</span>
 </div>

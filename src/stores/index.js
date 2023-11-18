@@ -96,6 +96,41 @@ function setPSInfos() {
     };
 }
 
+function setRewards() {
+    let initValues = {
+        currentPoint: 0,
+    };
+
+    const { subscribe, update, set } = writable({ ...initValues });
+
+    const fetchRewards = async () => {
+        try {
+            const options = {
+                path: '/app/point',
+            };
+
+            const res = await getApi(options);
+
+            update((datas) => {
+                datas.currentPoint = res.currentPoint;
+                return datas;
+            });
+        } catch (error) {
+            throw error;
+        }
+    };
+
+    const resetRewards = () => {
+        set({ ...initValues });
+    };
+
+    return {
+        subscribe,
+        fetchRewards,
+        resetRewards,
+    };
+}
+
 function setLoadingMap() {} // PS 정보를 불러오면서 서버와 통신 중인 상태 저장
 function setKickBoards() {} // PS 하나에 존재하는 킥보드 리스트
 function setKickBoardInfo() {} // 킥보드 하나의 정보를 저장
@@ -104,6 +139,7 @@ function setIsLogin() {} // 로그인한 상태인지 아닌지
 
 export const PSIDs = setPSIDs();
 export const PSInfos = setPSInfos();
+export const rewards = setRewards();
 export const loadingMap = setLoadingMap();
 export const kickBoards = setKickBoards();
 export const kickBoardInfo = setKickBoardInfo();

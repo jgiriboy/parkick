@@ -7,7 +7,10 @@
     let scanning = false;
     let html5Qrcode;
 
-    onMount(init);
+    onMount(() => {
+        init();
+        start();
+    });
 
     function init() {
         html5Qrcode = new Html5Qrcode('reader');
@@ -25,19 +28,14 @@
         );
         scanning = true;
     }
-
-    async function stop() {
-        await html5Qrcode.stop();
-        scanning = false;
-    }
-
     async function onScanSuccess(decodedText, decodedResult) {
         // alert(`Code matched = ${scannedUrl}`);
         const options = {
-            path: decodedText,
+            path: '/app/pulling?kickBoardId=' + decodedText,
         };
         const res = await getApi(options);
-        alert(res.isLocked);
+
+        alert('RENT: ' + res.isLocked);
     }
 
     function onScanFailure(error) {
@@ -45,14 +43,22 @@
     }
 </script>
 
-<main>
-    <reader id="reader" />
-    {#if scanning}
-        <button on:click={stop}>stop</button>
-    {:else}
-        <button on:click={start}>start</button>
-    {/if}
-</main>
+<div class="e107_3">
+    <a class="cancel-button" href="/">
+        <img src="images/cancel.svg" alt="" />
+    </a>
+    <span class="e107_4">코드스캔</span>
+    <span class="e107_11">코드스캔</span><span class="e107_12"
+        >QR코드를 스캔하여 대여/반납을 할 수 있습니다.(파킹 스테이션에 주차 시
+        리워드 지급)</span
+    >
+    <div id="reader" />
+    <div class="e107_10">
+        <div>
+            <img src="images/qrcode.svg" alt="" style="cursor:pointer" />
+        </div>
+    </div>
+</div>
 
 <style>
     main {

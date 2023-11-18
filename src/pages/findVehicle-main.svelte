@@ -137,12 +137,6 @@
     });
 </script>
 
-<link
-    rel="stylesheet"
-    type="text/css"
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-/>
-
 <div id="findVehicle-main" class="e39_345">
     <!-- kakao map api 연동 -->
     <div id="map" style="width:393px;height:852px;position:relative;" />
