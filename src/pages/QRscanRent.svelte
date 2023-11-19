@@ -88,9 +88,7 @@
             <div class="note-box">
                 <img src="images/park-success.gif" alt="" class="good-img" />
                 <div class="thank-you-msg-box">
-                    <span class="thank-you-msg font-regular"
-                        >비정상 주차 킥보드입니다.</span
-                    >
+                    <span class="thank-you-msg font-regular">대여 성공!</span>
                     <span
                         class="thank-you-msg font-regular"
                         style="font-size:14px">(반납 시 +500 PK 코인)</span
