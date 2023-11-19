@@ -122,7 +122,7 @@
                 <img src="images/park-success.gif" alt="" class="good-img" />
                 <div class="thank-you-msg-box">
                     <span class="thank-you-msg font-regular"
-                        >반납 감사합니다.</span
+                        >불법 주차 킥보드를 반납하셨습니다</span
                     >
                     <span
                         class="thank-you-msg font-regular"
