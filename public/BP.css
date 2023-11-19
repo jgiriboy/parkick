@@ -26,9 +26,9 @@
     flex-direction: column;
 }
 .good-img {
-    width: 60vw;
-    height: 60vh;
-    position: absolute;
+    width: 60%;
+    height: 60%;
+    /* position: absolute; */
 }
 .thank-you-msg {
     font-family: Pretendard;
