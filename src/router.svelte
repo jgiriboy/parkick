@@ -10,7 +10,6 @@
     import ParkickMap from './pages/parkickMap.svelte';
 </script>
 
-<!-- <Route path="/*" redirect="/index" /> -->
 <Route path="/"><Index /></Route>
 <Route path="/index"><Index /></Route>
 <Route path="/rent/"><QRscanRent /></Route>

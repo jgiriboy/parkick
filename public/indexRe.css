@@ -32,7 +32,7 @@
     margin-left: 2rem;
 }
 
-.nav-menu-item:first-child {
+.nav-menu-item:first-child, .nav-menu-item:nth-child(3) {
     cursor:pointer;
 }
 
@@ -89,6 +89,7 @@
 
 .index-note-icon {
     margin-right: 1rem;
+    cursor:pointer;
 }
 
 .index-note-text {
