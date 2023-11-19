@@ -96,10 +96,15 @@
 {#if goodParking && $currentRentStatus.parkedStatus == 'PARKED'}
     <div class="BP-main" transition:fly>
         <div class="note-box">
-            <img src="images/good.png" alt="" class="good-img" />
-            <span class="thank-you-msg font-regular"
-                >모범적인 주차 감사합니다.</span
-            >
+            <img src="images/park-success.gif" alt="" class="good-img" />
+            <div class="thank-you-msg-box">
+                <span class="thank-you-msg font-regular"
+                    >모범 주차 감사합니다.</span
+                >
+                <span class="thank-you-msg font-regular" style="font-size:14px"
+                    >(+500 PK 코인 적립됨)</span
+                >
+            </div>
         </div>
         <a href="/">
             <div class="BP-button">
@@ -110,34 +115,40 @@
 {:else if goodParking && $currentRentStatus.parkedStatus == 'UN_PARKED'}
     <div class="BP-main" transition:fly>
         <div class="note-box">
-            <img src="images/good.png" alt="" class="good-img" />
-            <span class="thank-you-msg font-regular"
-                >반납 감사합니다.<br />리워드 500원이 지급됩니다.</span
-            >
+            <img src="images/park-success.gif" alt="" class="good-img" />
+            <div class="thank-you-msg-box">
+                <span class="thank-you-msg font-regular">반납 감사합니다.</span>
+                <span class="thank-you-msg font-regular" style="font-size:14px"
+                    >(+500 PK 코인 적립됨)</span
+                >
+            </div>
         </div>
         <a href="/">
             <div class="BP-button">
                 <span class="confirm-text font-semibold">확인</span>
             </div>
         </a>
-    </div>
-{/if}
+    </div>{/if}
 
 {#if worstParking}
     <div class="BP-main" transition:fly>
         <div class="note-box">
-            <img src="images/bad.png" alt="" class="good-img" />
-            <span class="thank-you-msg font-regular"
-                >정상적인 주차가 아닙니다.<br /> 5% 추가 요금이 부과됩니다.</span
-            >
+            <img src="images/park-fail.gif" alt="" class="good-img" />
+            <div class="thank-you-msg-box">
+                <span class="thank-you-msg font-regular"
+                    >정상적인 주차가 아닙니다.</span
+                >
+                <span class="thank-you-msg font-regular" style="font-size:14px"
+                    >(5% 추가 요금 부과됨)</span
+                >
+            </div>
         </div>
         <a href="/">
             <div class="BP-button">
                 <span class="confirm-text font-semibold">확인</span>
             </div>
         </a>
-    </div>
-{/if}
+    </div>{/if}
 
 <div class="qrcode-main">
     <nav class="qrcode-nav">

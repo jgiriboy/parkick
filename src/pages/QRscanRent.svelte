@@ -65,10 +65,13 @@
 {#if isParkedWell && isScanned}
     <div class="BP-main" transition:fly>
         <div class="note-box">
-            <img src="images/good.png" alt="" class="good-img" />
-            <span class="thank-you-msg font-regular"
-                >성공적으로 대여하였습니다.</span
-            >
+            <img src="images/park-success.gif" alt="" class="good-img" />
+            <div class="thank-you-msg-box">
+                <span class="thank-you-msg font-regular">대여 성공!</span>
+                <span class="thank-you-msg font-regular" style="font-size:14px"
+                    >(정상 반납 시 +500 PK 코인)</span
+                >
+            </div>
         </div>
         <a href="/">
             <div class="BP-button">
@@ -79,18 +82,22 @@
 {:else if !isParkedWell && isScanned}
     <div class="BP-main" transition:fly>
         <div class="note-box">
-            <img src="images/good.png" alt="" class="good-img" />
-            <span class="thank-you-msg font-regular"
-                >비정상 주차 킥보드. 반납 시 리워드 지급!</span
-            >
+            <img src="images/park-success.gif" alt="" class="good-img" />
+            <div class="thank-you-msg-box">
+                <span class="thank-you-msg font-regular"
+                    >비정상 주차 킥보드입니다.</span
+                >
+                <span class="thank-you-msg font-regular" style="font-size:14px"
+                    >(반납 시 +500 PK 코인)</span
+                >
+            </div>
         </div>
         <a href="/">
             <div class="BP-button">
                 <span class="confirm-text font-semibold">확인</span>
             </div>
         </a>
-    </div>
-{/if}
+    </div>{/if}
 
 <div class="qrcode-main">
     <nav class="qrcode-nav">
